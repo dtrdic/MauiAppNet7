@@ -35,12 +35,11 @@ workflows:
           $DOTNET workload list
       - name: Build the app for iOS Simulator
         script: |
-          $DOTNET publish -f net7.0-maccatalyst \
+          $DOTNET publish -f net7.0-ios \
             -c Release \
             -p:UseNet7=true \
             -p:ApplicationDisplayVersion="1.0.0" \
             -p:ApplicationVersion="1" \
-            -p:RuntimeIdentifier=iossim \
             -o ../artifacts
 
     artifacts:
