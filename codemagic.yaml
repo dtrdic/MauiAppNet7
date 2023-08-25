@@ -40,6 +40,7 @@ workflows:
             -p:UseNet7=true \
             -p:ApplicationDisplayVersion="1.0.0" \
             -p:ApplicationVersion="1" \
+            -p:RuntimeIdentifier=iossimulator-arm64 \
             -o ../artifacts
 
     artifacts:
