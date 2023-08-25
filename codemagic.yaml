@@ -41,9 +41,7 @@ workflows:
             -p:ApplicationDisplayVersion="1.0.0" \
             -p:ApplicationVersion="1" \
             -p:RuntimeIdentifier=ios-x64 \
-            -o ../artifacts \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO 
+            -o ../artifacts 
 
     artifacts:
     - ./artifacts/*.app
