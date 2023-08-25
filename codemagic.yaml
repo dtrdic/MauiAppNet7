@@ -14,11 +14,14 @@ workflows:
         script: | 
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
-          ./dotnet-install.sh --install-dir $DOTNET_PATH
+          ./dotnet-install.sh --channel 7.0 --install-dir $DOTNET_PATH
       - name: Install MAUI
         script: |
-          $DOTNET nuget locals all --clear 
-          $DOTNET workload install ios maui --source https://aka.ms/dotnet7/nuget/index.json --source https://api.nuget.org/v3/index.json
+         $DOTNET_BIN nuget locals all --clear
+         $DOTNET workload restore
+         $DOTNET workload install maui-android maui-ios \
+         --source https://aka.ms/dotnet7/nuget/index.json \
+         --source https://api.nuget.org/v3/index.json
       - name: Set Info.plist values
         script: | 
           PLIST=$CM_BUILD_DIR/Platforms/iOS/Info.plist
