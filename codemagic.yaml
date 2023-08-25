@@ -35,6 +35,9 @@ workflows:
           $DOTNET workload list
       - name: Build the app for iOS Simulator
         script: |
+          export CODE_SIGN_IDENTITY=""
+          export CODE_SIGNING_REQUIRED=NO
+          export CODE_SIGNING_ALLOWED=NO
           $DOTNET publish -f net7.0-ios \
             -c Release \
             -p:UseNet7=true \
