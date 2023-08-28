@@ -35,7 +35,8 @@ workflows:
           $DOTNET workload list
       - name: Build the app for iOS Simulator
         script: |
-          $DOTNET publish -f net7.0-ios -c Debug
+          $DOTNET publish -f net7.0-ios -c Debug \
+          -o ../artifacts
 
     artifacts:
     - ./artifacts/*.app
