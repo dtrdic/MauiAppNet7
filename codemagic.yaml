@@ -35,7 +35,7 @@ workflows:
           $DOTNET workload list
       - name: Build the app for iOS Simulator
         script: |
-          $DOTNET publish -f net7.0-ios \
+          $DOTNET publish -f net7.0-ios --no-codesign \
             -c Release \
             -p:UseNet7=true \
             -p:ApplicationDisplayVersion="1.0.0" \
