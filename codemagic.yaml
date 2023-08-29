@@ -15,6 +15,9 @@ workflows:
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 7.0 --install-dir $DOTNET_PATH
+      - name: Add nuget source
+        script: |
+          $DOTNET nuget add source https://www.myget.org/F/caliburn-micro-builds/api/v3/index.json --name CaliburnNuGet.org
       - name: Install MAUI
         script: |
           $DOTNET_BIN nuget locals all --clear
@@ -22,9 +25,6 @@ workflows:
           $DOTNET workload install maui-android maui-ios \
           --source https://aka.ms/dotnet7/nuget/index.json \
           --source https://api.nuget.org/v3/index.json
-      - name: Add nuget source
-        script: |
-          $DOTNET nuget add source https://www.myget.org/F/caliburn-micro-builds/api/v3/index.json --name CaliburnNuGet.org
       - name: Build the app for iOS Simulator
         script: |
           $DOTNET clean
