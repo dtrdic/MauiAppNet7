@@ -67,7 +67,8 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.0, )",
+              "autoReferenced": true
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -184,7 +185,8 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.0, )",
+              "autoReferenced": true
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -246,7 +248,8 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.0, )",
+              "autoReferenced": true
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
