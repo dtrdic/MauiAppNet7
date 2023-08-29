@@ -57,8 +57,7 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
+              "version": "[7.0.1, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
