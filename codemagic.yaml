@@ -28,7 +28,6 @@ workflows:
       - name: Build the app for iOS Simulator
         script: |
           cd src
-          $DOTNET_BIN
-          dotnet build -f net7.0-ios \ -c Debug
+          $DOTNET clean $DOTNET dotnet build -f net7.0-ios\ -c Debug \ -o ../artifacts
     artifacts:
     - ./artifacts/*.app
