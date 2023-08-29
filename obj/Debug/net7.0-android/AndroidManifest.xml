@@ -27,5 +27,5 @@
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="io.codemagic.dtrdic15.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
   <!--suppress UsesMinSdkAttributes-->
-  <uses-sdk android:minSdkVersion="19" />
+  <uses-sdk android:minSdkVersion="21" />
 </manifest>
