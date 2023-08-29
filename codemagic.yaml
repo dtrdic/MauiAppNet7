@@ -22,7 +22,7 @@ workflows:
         script: |
           $DOTNET_BIN nuget locals all --clear
           $DOTNET workload restore
-          $DOTNET workload install maui-android maui-ios \
+          $DOTNET workload install maui-ios \
           --source https://aka.ms/dotnet7/nuget/index.json \
           --source https://api.nuget.org/v3/index.json
       - name: Build the app for iOS Simulator
