@@ -27,7 +27,6 @@ workflows:
           --source https://api.nuget.org/v3/index.json
       - name: Build the app for iOS Simulator
         script: |
-          $DOTNET clean
           $DOTNET build MauiNet7.csproj -f net7.0-ios \
           -c Debug
     artifacts:
