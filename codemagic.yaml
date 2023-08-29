@@ -27,7 +27,6 @@ workflows:
           --source https://api.nuget.org/v3/index.json
       - name: Build the app for iOS Simulator
         script: |
-          cd src
           $DOTNET clean $DOTNET dotnet build -f net7.0-ios\ -c Debug \ -o ../artifacts
     artifacts:
     - ./artifacts/*.app
